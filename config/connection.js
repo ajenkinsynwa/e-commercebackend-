@@ -1,4 +1,4 @@
-require('dotenv').config();
+require('dotenv').config(); //Starter Code Provided By Course 
 
 const Sequelize = require('sequelize');
 

@@ -1,4 +1,4 @@
--- DROP DATABASE
+-- DROP DATABASE --Code Provided by course
 DROP DATABASE IF EXISTS ecommerce_db;
 
 -- CREATE DATABASE

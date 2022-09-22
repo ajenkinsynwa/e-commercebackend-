@@ -1,4 +1,4 @@
-//Code Provided by Course 
+//Starter Code Provided by Course 
 const { Model, DataTypes } = require('sequelize');
 
 const sequelize = require('../config/connection.js');

@@ -1,4 +1,4 @@
-// Code Provided by Course 
+//Starter Code Provided by Course 
 // import important parts of sequelize library
 const { Model, DataTypes } = require('sequelize');
 // import our database connection from config.js

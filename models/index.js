@@ -1,4 +1,4 @@
-//Code Provided by Course
+//Starter Code Provided by Course 
 const Product = require('./Product');
 const Category = require('./Category');
 const Tag = require('./Tag');

@@ -35,19 +35,47 @@ router.post('/', (req, res) => {
   Category.create({
     category_name: req.body.category_name
   })
-  .then(categoryData => res.json(categoryData))
-  .catch(err => {
-    console.log(err);
+    .then(categoryData => res.json(categoryData))
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+});
+
+router.put('/:id', async (req, res) => {
+  try {
+    const updateCategory = await Category.update({
+      id: req.params.id,
+      category_name: req.body.category_name
+    }, {
+      where: {
+        id: req.params.id
+      }
+    });
+
+    if (!updateCategory[0]) {
+      res.status(404).json({ message: "The category cannot be found" });
+    }
+    res.status(200).json(updateCategory);
+  } catch (err) {
     res.status(500).json(err);
-  });
+  }
 });
 
-router.put('/:id', (req, res) => {
-  // update a category by its `id` value
-});
+router.delete('/:id', async (req, res) => {
+  try {
+    const deletedCategory = await Category.destroy(
+  {
+    where:{ id: req.params.id 
+  }
+}); if(!deletedCategory) {
+  res.status(404).json({ message: "The category id cannot be found"});
+}
+  res.status(200).json(deletedCategory);
+}catch {
+ res.status(500).json(error);
 
-router.delete('/:id', (req, res) => {
-  // delete a category by its `id` value
+}
 });
 
 module.exports = router;

@@ -1,5 +1,5 @@
 # E-Commerce Back-End
-Build the back end for an e-commerce site working with Express.js API to Sequelize to interact with a MySQL database
+ The back end for an e-commerce site working with Express.js API to Sequelize to interact with a MySQL database
 
 # Description 
 
